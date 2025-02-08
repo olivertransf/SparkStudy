@@ -8,28 +8,55 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    @State private var showSignInview: Bool = false
+    
+    @State private var showSignInView: Bool = false
+    @State private var selectedView: SelectedView? = .note
     
     var body: some View {
-            ZStack {
-                if !showSignInview {
-                    NavigationStack {
-                        Text("Hello")
+        ZStack {
+            if !showSignInView {
+                NavigationSplitView {
+                    List(selection: $selectedView) {
+                        Section(header: Text("Main")) {
+                            NavigationLink(value: SelectedView.note) {
+                                Label("Notes", systemImage: "note.text")
+                            }
+                            NavigationLink(value: SelectedView.profile) {
+                                Label("Profile", systemImage: "person")
+                            }
+                        }
+                    }
+                    .navigationTitle("Menu")
+                } detail: {
+                    switch selectedView {
+                    case .note:
+                        NotesListView()
+                    case .profile:
+                        ProfileView(showSignInView: $showSignInView)
+                    case .none:
+                        Text("Select a view")
+                            .font(.title)
+                            .foregroundColor(.gray)
                     }
                 }
             }
-            .onAppear {
-                let authuser = try? AuthenticationManager.shared.getAuthenticatedUser()
-                self.showSignInview = authuser == nil
-            }
-        
-            .fullScreenCover(isPresented: $showSignInview) {
-                NavigationView {
-                    AuthenticationView(showSignInView: $showSignInview)
+        }
+        .onAppear {
+            let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
+            showSignInView = authUser == nil
+        }
+        .fullScreenCover(isPresented: $showSignInView) {
+            NavigationStack {
+                AuthenticationView(showSignInView: $showSignInView)
             }
         }
     }
+}
+
+// Enum to manage selected views
+enum SelectedView: Hashable {
+    case note
+    case profile
 }
 
 #Preview {

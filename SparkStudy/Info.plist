@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>GIDClientID</key>
-	<string>665594576687-go20elaol4m4q0lkodas4fgq0u9ii71n.apps.googleusercontent.com</string>
+	<string>387747018010-qi38nrtltjl8ghs8ifqiotdpnovbi3ot.apps.googleusercontent.com</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -13,7 +13,7 @@
 			<string>Google Sign In</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.665594576687-go20elaol4m4q0lkodas4fgq0u9ii71n</string>
+				<string>com.googleusercontent.apps.387747018010-qi38nrtltjl8ghs8ifqiotdpnovbi3ot</string>
 			</array>
 		</dict>
 	</array>

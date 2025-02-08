@@ -13,11 +13,15 @@ final class Utilities {
     static let shared = Utilities()
     
     private init() {}
-    
+
     @MainActor
     func topViewController(controller: UIViewController? = nil) -> UIViewController? {
-        
-        let controller = controller ?? UIApplication.shared.keyWindow?.rootViewController
+        let controller = controller ?? UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?
+            .rootViewController
         
         if let navigationController = controller as? UINavigationController {
             return topViewController(controller: navigationController.visibleViewController)

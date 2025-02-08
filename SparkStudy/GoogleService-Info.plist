@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>665594576687-go20elaol4m4q0lkodas4fgq0u9ii71n.apps.googleusercontent.com</string>
+	<string>387747018010-qi38nrtltjl8ghs8ifqiotdpnovbi3ot.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.665594576687-go20elaol4m4q0lkodas4fgq0u9ii71n</string>
+	<string>com.googleusercontent.apps.387747018010-qi38nrtltjl8ghs8ifqiotdpnovbi3ot</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDj18sKpyVsFg0FQ7naNZyDfibzGb3-FPk</string>
+	<string>AIzaSyCtZAFF3AI-FLzQkxJtBWOrW48dVl21IXk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>665594576687</string>
+	<string>387747018010</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.olivertran.SparkStudy</string>
 	<key>PROJECT_ID</key>
-	<string>sparkstudy-4b703</string>
+	<string>dream-1048a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>sparkstudy-4b703.firebasestorage.app</string>
+	<string>dream-1048a.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:665594576687:ios:19bd7c0b5af99c8f82abda</string>
+	<string>1:387747018010:ios:2904761ec465ee948028a3</string>
 </dict>
 </plist>
